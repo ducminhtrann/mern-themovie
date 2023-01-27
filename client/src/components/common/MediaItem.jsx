@@ -36,7 +36,7 @@ const MediaItem = ({ media, mediaType }) => {
     <Link
       to={
         mediaType !== "people"
-          ? routesGen.mediaDetail(mediaType, media.mediaId)
+          ? routesGen.mediaDetail(mediaType, media.mediaId || media.id)
           : routesGen.person(media.id)
       }
     >
